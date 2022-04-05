@@ -1,6 +1,5 @@
 package university;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Student {
     String name, surname, middlename;
@@ -11,28 +10,12 @@ public class Student {
     ArrayList<Olympiad> olympiads = new ArrayList<>();
 
 
-    public Student(String name, String surname){
-        this.name = name;
-        this.surname = surname;
-        this.middlename = "";
-        this.year = 2021;
-        this.studentBookNumber = 0;
-    }
-
-    public Student(String surname, String name, String middlename){
+    public Student(String surname, String name, String middlename, int year){
         this.name = name;
         this.surname = surname;
         this.middlename = middlename;
-        this.year = 2021;
+        this.year = year;
         this.studentBookNumber = newStudentBookNumber();
-    }
-
-    public Student( String surname, String name, String middlename, int studentBookNumber){
-        this.name = name;
-        this.surname = surname;
-        this.middlename = middlename;
-        this.year = 2021;
-        this.studentBookNumber = studentBookNumber;
     }
 
     public int newStudentBookNumber(){
@@ -53,6 +36,14 @@ public class Student {
 
     public void setSurname(String surname) {
         this.surname = surname;
+    }
+
+    public String getMiddlename() {
+        return middlename;
+    }
+
+    public void  getMiddlename(String surname) {
+        this.middlename = middlename;
     }
 
     public int getStudentBookNumber() {

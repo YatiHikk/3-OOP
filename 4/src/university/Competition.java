@@ -1,5 +1,4 @@
 package university;
-
 import java.util.Date;
 
 public class Competition implements Event {
